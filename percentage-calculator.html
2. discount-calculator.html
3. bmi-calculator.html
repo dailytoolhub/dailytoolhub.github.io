@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Percentage Calculator 2026 – Calculate Percentages Online</title>
+
+<meta name="description" content="Use our free Percentage Calculator to calculate percentages, increase, decrease, marks percentage and percentage difference instantly online.">
+
+<meta name="keywords" content="percentage calculator, marks percentage calculator, percentage increase calculator, percentage decrease calculator, online percentage tool">
+
+<meta name="robots" content="index,follow">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background:#f5f7fa;
+color:#222;
+}
+
+header{
+background:#0dcaf0;
+color:#000;
+padding:22px;
+text-align:center;
+}
+
+.container{
+max-width:850px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 0 12px rgba(0,0,0,0.08);
+margin-bottom:25px;
+}
+
+input,button{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+font-size:16px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+background:#0dcaf0;
+color:#000;
+border:none;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#0aa7c4;
+}
+
+.result{
+font-size:22px;
+font-weight:bold;
+color:#0aa7c4;
+line-height:1.8;
+margin-top:10px;
+}
+
+h2{
+margin-top:0;
+}
+
+ul{
+padding-left:20px;
+line-height:1.8;
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Free Percentage Calculator 2026</h1>
+<p>Calculate Percentages Instantly Online</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Percentage Calculator</h2>
+
+<label>What is X% of Y?</label>
+<input type="number" id="percent" placeholder="Enter percentage">
+
+<input type="number" id="number" placeholder="Enter number">
+
+<button onclick="calculatePercentage()">Calculate</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<div class="card">
+
+<h2>How to Use This Tool</h2>
+
+<p>Enter the percentage value and the number. Click Calculate to get the instant answer.</p>
+
+<h2>Useful For</h2>
+
+<ul>
+<li>Marks percentage calculation</li>
+<li>Discount calculations</li>
+<li>GST percentage understanding</li>
+<li>Profit margin calculations</li>
+<li>Business reports</li>
+<li>Student exam results</li>
+</ul>
+
+<h2>Examples</h2>
+
+<ul>
+<li>20% of 500 = 100</li>
+<li>15% of 2000 = 300</li>
+<li>75% of 800 = 600</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>1. Can I calculate marks percentage?</strong><br>
+Yes, use total marks and obtained marks formulas.</p>
+
+<p><strong>2. Is this calculator free?</strong><br>
+Yes, completely free.</p>
+
+<p><strong>3. Does it work on mobile?</strong><br>
+Yes, mobile friendly.</p>
+
+<h2>Why Daily Tool Hub?</h2>
+
+<p>Daily Tool Hub offers free calculators for finance, students, shopping and daily needs.</p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Daily Tool Hub | Free Percentage Calculator
+</footer>
+
+<script>
+function calculatePercentage(){
+
+let percent=parseFloat(document.getElementById("percent").value);
+let number=parseFloat(document.getElementById("number").value);
+
+if(isNaN(percent)||isNaN(number)){
+document.getElementById("result").innerHTML="Please enter valid values";
+return;
+}
+
+let answer=(percent/100)*number;
+
+document.getElementById("result").innerHTML=
+percent + "% of " + number + " = " + answer.toFixed(2);
+
+}
+</script>
+
+</body>
+</html>
