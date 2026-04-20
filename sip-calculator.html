@@ -11,110 +11,58 @@
 <meta name="keywords" content="sip calculator, sip calculator india, mutual fund sip calculator, monthly sip return calculator, investment calculator">
 
 <meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dailytoolhub.github.io/sip-calculator.html">
 
+<link rel="stylesheet" href="style.css">
 <style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-padding:0;
-background:#f5f7fa;
-color:#222;
-}
-
-header{
-background:#fd7e14;
-color:white;
-padding:22px;
-text-align:center;
-}
-
-.container{
-max-width:850px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 0 12px rgba(0,0,0,0.08);
-margin-bottom:25px;
-}
-
-input,button{
-width:100%;
-padding:12px;
-margin-top:10px;
-margin-bottom:15px;
-font-size:16px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-background:#fd7e14;
-color:white;
-border:none;
-cursor:pointer;
-font-weight:bold;
-}
-
-button:hover{
-background:#dc6502;
-}
-
-.result{
-font-size:22px;
-font-weight:bold;
-color:#fd7e14;
-line-height:1.8;
-margin-top:10px;
-}
-
-h2{
-margin-top:0;
-}
-
-ul{
-padding-left:20px;
-line-height:1.8;
-}
-
-footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-color:#666;
-}
+    :root { --primary-color: #fd7e14; --primary-hover: #dc6502; --result-color: #fd7e14; }
 </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 </head>
 
 <body>
 
-<header>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="header">
 <h1>Free SIP Calculator India 2026</h1>
 <p>Mutual Fund SIP Return Calculator</p>
 </header>
 
-<div class="container">
+<nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="reverse-gst-calculator.html">Reverse GST</a>
+    <a href="bmi-calculator.html">BMI</a>
+    <a href="emi-calculator.html">EMI</a>
+    <a href="discount-calculator.html">Discount</a>
+</nav>
+
+<main class="container" id="main-content">
 
 <div class="card">
 
 <h2>SIP Calculator</h2>
 
-<label>Monthly Investment (₹)</label>
-<input type="number" id="monthly" placeholder="Enter monthly SIP amount">
+<label for="monthly">Monthly Investment (₹)</label>
+<input type="number" id="monthly" placeholder="Enter monthly SIP amount" min="1" required>
 
-<label>Expected Annual Return (%)</label>
-<input type="number" id="rate" placeholder="Enter expected return">
+<label for="rate">Expected Annual Return (%)</label>
+<input type="number" id="rate" placeholder="Enter expected return" min="0.1" max="50" step="0.1" required>
 
-<label>Investment Period (Years)</label>
-<input type="number" id="years" placeholder="Enter years">
+<label for="years">Investment Period (Years)</label>
+<input type="number" id="years" placeholder="Enter years" min="1" max="50" required>
 
-<button onclick="calculateSIP()">Calculate SIP Return</button>
+<button onclick="calculateSIP()" aria-label="Calculate SIP Return">Calculate SIP Return</button>
 
-<div class="result" id="result"></div>
+<div class="result" id="result" role="status" aria-live="polite"></div>
 
 </div>
 
@@ -155,38 +103,13 @@ Many funds allow low starting amounts.</p>
 
 </div>
 
-</div>
+</main>
 
-<footer>
-© 2026 Daily Tool Hub | Free SIP Calculator
+<footer class="footer">
+<p>&copy; 2026 <a href="index.html">Daily Tool Hub</a> | Free SIP Calculator</p>
 </footer>
 
-<script>
-function calculateSIP(){
-
-let monthly=parseFloat(document.getElementById("monthly").value);
-let annualRate=parseFloat(document.getElementById("rate").value);
-let years=parseFloat(document.getElementById("years").value);
-
-if(isNaN(monthly)||isNaN(annualRate)||isNaN(years)){
-document.getElementById("result").innerHTML="Please enter valid values";
-return;
-}
-
-let r=annualRate/12/100;
-let n=years*12;
-
-let futureValue = monthly * ((Math.pow(1+r,n)-1)/r) * (1+r);
-
-let invested = monthly * n;
-let wealth = futureValue - invested;
-
-document.getElementById("result").innerHTML=
-"Total Invested: ₹" + invested.toFixed(2) + "<br>" +
-"Estimated Returns: ₹" + wealth.toFixed(2) + "<br>" +
-"Final Value: ₹" + futureValue.toFixed(2);
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

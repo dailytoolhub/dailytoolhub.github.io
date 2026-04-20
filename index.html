@@ -12,6 +12,15 @@
     <link rel="canonical" href="https://dailytoolhub.github.io">
     <link rel="stylesheet" href="style.css">
     <title>Daily Tool Hub - Free Online Calculators India</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -27,13 +36,16 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
     <header class="header">
         <div class="container">
             <h1>Daily Tool Hub</h1>
             <p>Free Online Calculators for India</p>
         </div>
     </header>
-    <nav class="nav">
+    
+    <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="gst-calculator.html">GST</a>
         <a href="reverse-gst-calculator.html">Reverse GST</a>
@@ -42,61 +54,64 @@
         <a href="discount-calculator.html">Discount</a>
         <a href="about.html">About</a>
     </nav>
-    <main class="container">
+    
+    <main class="container" id="main-content">
         <section class="welcome">
             <h2>Free Online Calculators</h2>
             <p>Explore our collection of free calculators to help with financial planning, health tracking, and everyday calculations.</p>
         </section>
+        
         <section class="section">
-            <div class="card">
+            <article class="card">
                 <h3>GST Calculator</h3>
                 <p>Add or remove GST (5%, 12%, 18%, 28%) instantly.</p>
-                <a href="gst-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="gst-calculator.html" class="btn" aria-label="Use GST Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>Reverse GST Calculator</h3>
                 <p>Extract base amount and GST from inclusive prices.</p>
-                <a href="reverse-gst-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="reverse-gst-calculator.html" class="btn" aria-label="Use Reverse GST Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>BMI Calculator</h3>
                 <p>Calculate your Body Mass Index and check health status.</p>
-                <a href="bmi-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="bmi-calculator.html" class="btn" aria-label="Use BMI Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>EMI Calculator</h3>
                 <p>Calculate loan EMI for home, car, and personal loans.</p>
-                <a href="emi-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="emi-calculator.html" class="btn" aria-label="Use EMI Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>Discount Calculator</h3>
                 <p>Calculate discounts and final prices instantly.</p>
-                <a href="discount-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="discount-calculator.html" class="btn" aria-label="Use Discount Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>SIP Calculator</h3>
                 <p>Calculate returns on systematic investment plans.</p>
-                <a href="sip-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="sip-calculator.html" class="btn" aria-label="Use SIP Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>Age Calculator</h3>
                 <p>Calculate your exact age in years, months, days.</p>
-                <a href="age-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="age-calculator.html" class="btn" aria-label="Use Age Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>Percentage Calculator</h3>
                 <p>Calculate percentages instantly.</p>
-                <a href="percentage-calculator.html" class="btn">Use Calculator</a>
-            </div>
-            <div class="card">
+                <a href="percentage-calculator.html" class="btn" aria-label="Use Percentage Calculator">Use Calculator</a>
+            </article>
+            <article class="card">
                 <h3>Privacy Policy</h3>
                 <p>Learn how we handle your data.</p>
-                <a href="privacy-policy.html" class="btn">Read More</a>
-            </div>
+                <a href="privacy-policy.html" class="btn" aria-label="Read Privacy Policy">Read More</a>
+            </article>
         </section>
     </main>
+    
     <footer class="footer">
-        <p>&copy; 2026 Daily Tool Hub | <a href="privacy-policy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a></p>
+        <p>&copy; 2026 <a href="index.html">Daily Tool Hub</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a></p>
     </footer>
 </body>
 </html>

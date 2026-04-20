@@ -3,68 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Percentage Calculator - Calculate Percentages Online</title>
+
+<title>Free Percentage Calculator 2026 – Calculate Percentages Online</title>
+
 <meta name="description" content="Free online percentage calculator. Calculate percentage of a number, percentage increase/decrease, and more.">
-<style>
-body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f5f7fa;color:#222}
-header{background:#0d6efd;color:white;padding:20px;text-align:center}
-.container{max-width:600px;margin:auto;padding:20px}
-.card{background:white;padding:25px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,0.08);margin-bottom:20px}
-input,select,button{width:100%;padding:12px;margin-top:10px;margin-bottom:15px;font-size:16px;border-radius:8px;border:1px solid #ccc}
-button{background:#0d6efd;color:white;border:none;cursor:pointer}
-button:hover{background:#0b5ed9}
-#result{margin-top:20px;padding:15px;background:#e7f1ff;border-radius:8px;font-size:18px;font-weight:bold}
-.footer{text-align:center;padding:20px;margin-top:30px;color:#666}
-</style>
+
+<meta name="keywords" content="percentage calculator, percent calculator, calculate percentage, percentage online tool">
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dailytoolhub.github.io/percentage-calculator.html">
+
+<link rel="stylesheet" href="style.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 </head>
+
 <body>
-<header>
-<h1>Percentage Calculator</h1>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="header">
+<h1>Free Percentage Calculator 2026</h1>
+<p>Calculate Percentages Instantly</p>
 </header>
-<div class="container">
-<div class="card">
-<h2>Calculate Percentage</h2>
-<label>Enter the number:</label>
-<input type="number" id="number" placeholder="e.g., 500">
-<label>Enter percentage (%):</label>
-<input type="number" id="percent" placeholder="e.g., 20">
-<button onclick="calculatePercent()">Calculate</button>
-<div id="result"></div>
-</div>
+
+<nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="reverse-gst-calculator.html">Reverse GST</a>
+    <a href="bmi-calculator.html">BMI</a>
+    <a href="emi-calculator.html">EMI</a>
+    <a href="discount-calculator.html">Discount</a>
+</nav>
+
+<main class="container" id="main-content">
+
 <div class="card">
 <h2>What is X% of Y?</h2>
-<label>Percentage (%):</label>
-<input type="number" id="percent2" placeholder="e.g., 10">
-<label>Total number:</label>
-<input type="number" id="total" placeholder="e.g., 200">
-<button onclick="calculatePercentOf()">Calculate</button>
-<div id="result2"></div>
+
+<label for="percent2">Percentage (%)</label>
+<input type="number" id="percent2" placeholder="e.g., 20" min="0" required>
+
+<label for="total">Total Number</label>
+<input type="number" id="total" placeholder="e.g., 500" min="0" required>
+
+<button onclick="calculatePercentOf()" aria-label="Calculate percentage">Calculate</button>
+
+<div class="result" id="result2" role="status" aria-live="polite"></div>
 </div>
+
+<div class="card">
+<h2>Percentage of Number</h2>
+
+<label for="number">Enter the Number</label>
+<input type="number" id="number" placeholder="e.g., 500" min="0" required>
+
+<label for="percent">Enter Percentage (%)</label>
+<input type="number" id="percent" placeholder="e.g., 20" min="0" required>
+
+<button onclick="calculatePercent()" aria-label="Calculate percentage">Calculate</button>
+
+<div class="result" id="result" role="status" aria-live="polite"></div>
 </div>
-<div class="footer">
-<p>&copy; 2026 Daily Tool Hub</p>
-</div>
-<script>
-function calculatePercent() {
-    var num = parseFloat(document.getElementById('number').value);
-    var perc = parseFloat(document.getElementById('percent').value);
-    if (isNaN(num) || isNaN(perc)) {
-        document.getElementById('result').innerHTML = 'Please enter valid numbers';
-        return;
-    }
-    var res = (num * perc) / 100;
-    document.getElementById('result').innerHTML = perc + '% of ' + num + ' = ' + res.toFixed(2);
-}
-function calculatePercentOf() {
-    var perc = parseFloat(document.getElementById('percent2').value);
-    var total = parseFloat(document.getElementById('total').value);
-    if (isNaN(perc) || isNaN(total)) {
-        document.getElementById('result2').innerHTML = 'Please enter valid numbers';
-        return;
-    }
-    var res = (perc * total) / 100;
-    document.getElementById('result2').innerHTML = perc + '% of ' + total + ' = ' + res.toFixed(2);
-}
-</script>
+
+</main>
+
+<footer class="footer">
+<p>&copy; 2026 <a href="index.html">Daily Tool Hub</a> | Free Percentage Calculator</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>

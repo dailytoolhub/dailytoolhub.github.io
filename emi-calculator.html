@@ -11,109 +11,58 @@
 <meta name="keywords" content="emi calculator, loan emi calculator india, home loan emi calculator, car loan emi calculator, personal loan calculator">
 
 <meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dailytoolhub.github.io/emi-calculator.html">
 
+<link rel="stylesheet" href="style.css">
 <style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-padding:0;
-background:#f5f7fa;
-color:#222;
-}
-
-header{
-background:#198754;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-.container{
-max-width:850px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 0 10px rgba(0,0,0,0.08);
-margin-bottom:25px;
-}
-
-input,select,button{
-width:100%;
-padding:12px;
-margin-top:10px;
-margin-bottom:15px;
-font-size:16px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-background:#198754;
-color:white;
-border:none;
-cursor:pointer;
-font-weight:bold;
-}
-
-button:hover{
-background:#146c43;
-}
-
-.result{
-font-size:22px;
-font-weight:bold;
-color:#198754;
-margin-top:10px;
-line-height:1.7;
-}
-
-h2{
-margin-top:0;
-}
-
-ul{
-padding-left:20px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-color:#666;
-}
+    :root { --primary-color: #198754; --primary-hover: #146c43; --result-color: #198754; }
 </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 </head>
 
 <body>
 
-<header>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="header">
 <h1>Free EMI Calculator India 2026</h1>
 <p>Home Loan, Car Loan & Personal Loan EMI Tool</p>
 </header>
 
-<div class="container">
+<nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="reverse-gst-calculator.html">Reverse GST</a>
+    <a href="bmi-calculator.html">BMI</a>
+    <a href="emi-calculator.html">EMI</a>
+    <a href="discount-calculator.html">Discount</a>
+</nav>
+
+<main class="container" id="main-content">
 
 <div class="card">
 
 <h2>Loan EMI Calculator</h2>
 
-<label>Loan Amount (₹)</label>
-<input type="number" id="amount" placeholder="Enter loan amount">
+<label for="amount">Loan Amount (₹)</label>
+<input type="number" id="amount" placeholder="Enter loan amount" min="1" required>
 
-<label>Interest Rate (%) Per Year</label>
-<input type="number" id="rate" placeholder="Enter annual interest rate">
+<label for="rate">Interest Rate (%) Per Year</label>
+<input type="number" id="rate" placeholder="Enter annual interest rate" min="0.1" max="50" step="0.01" required>
 
-<label>Loan Tenure (Years)</label>
-<input type="number" id="years" placeholder="Enter years">
+<label for="years">Loan Tenure (Years)</label>
+<input type="number" id="years" placeholder="Enter years" min="1" max="50" required>
 
-<button onclick="calculateEMI()">Calculate EMI</button>
+<button onclick="calculateEMI()" aria-label="Calculate EMI">Calculate EMI</button>
 
-<div class="result" id="result"></div>
+<div class="result" id="result" role="status" aria-live="polite"></div>
 
 </div>
 
@@ -164,39 +113,13 @@ Yes, 100% free.</p>
 
 </div>
 
-</div>
+</main>
 
-<footer>
-© 2026 Daily Tool Hub | Free EMI Calculator India
+<footer class="footer">
+<p>&copy; 2026 <a href="index.html">Daily Tool Hub</a> | Free EMI Calculator India</p>
 </footer>
 
-<script>
-function calculateEMI(){
-
-let P=parseFloat(document.getElementById("amount").value);
-let annualRate=parseFloat(document.getElementById("rate").value);
-let years=parseFloat(document.getElementById("years").value);
-
-if(isNaN(P)||isNaN(annualRate)||isNaN(years)){
-document.getElementById("result").innerHTML="Please enter valid values";
-return;
-}
-
-let r=annualRate/12/100;
-let n=years*12;
-
-let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-
-let totalPayment=emi*n;
-let totalInterest=totalPayment-P;
-
-document.getElementById("result").innerHTML=
-"Monthly EMI: ₹"+emi.toFixed(2)+"<br>" +
-"Total Interest: ₹"+totalInterest.toFixed(2)+"<br>" +
-"Total Payment: ₹"+totalPayment.toFixed(2);
-
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

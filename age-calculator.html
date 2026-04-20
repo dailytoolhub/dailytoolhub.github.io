@@ -11,104 +11,52 @@
 <meta name="keywords" content="age calculator, exact age calculator, date of birth calculator, dob age calculator, calculate age online">
 
 <meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dailytoolhub.github.io/age-calculator.html">
 
+<link rel="stylesheet" href="style.css">
 <style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-padding:0;
-background:#f5f7fa;
-color:#222;
-}
-
-header{
-background:#6f42c1;
-color:white;
-padding:22px;
-text-align:center;
-}
-
-.container{
-max-width:850px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 0 12px rgba(0,0,0,0.08);
-margin-bottom:25px;
-}
-
-input,button{
-width:100%;
-padding:12px;
-margin-top:10px;
-margin-bottom:15px;
-font-size:16px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-background:#6f42c1;
-color:white;
-border:none;
-cursor:pointer;
-font-weight:bold;
-}
-
-button:hover{
-background:#5a32a3;
-}
-
-.result{
-font-size:22px;
-font-weight:bold;
-color:#6f42c1;
-line-height:1.8;
-margin-top:10px;
-}
-
-h2{
-margin-top:0;
-}
-
-ul{
-padding-left:20px;
-line-height:1.8;
-}
-
-footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-color:#666;
-}
+    :root { --primary-color: #6f42c1; --primary-hover: #5a32a3; --result-color: #6f42c1; }
 </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 </head>
 
 <body>
 
-<header>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="header">
 <h1>Free Age Calculator 2026</h1>
 <p>Calculate Exact Age by Date of Birth Instantly</p>
 </header>
 
-<div class="container">
+<nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="reverse-gst-calculator.html">Reverse GST</a>
+    <a href="bmi-calculator.html">BMI</a>
+    <a href="emi-calculator.html">EMI</a>
+    <a href="discount-calculator.html">Discount</a>
+</nav>
+
+<main class="container" id="main-content">
 
 <div class="card">
 
 <h2>Age Calculator</h2>
 
-<label>Select Your Date of Birth</label>
-<input type="date" id="dob">
+<label for="dob">Select Your Date of Birth</label>
+<input type="date" id="dob" required>
 
-<button onclick="calculateAge()">Calculate Age</button>
+<button onclick="calculateAge()" aria-label="Calculate Age">Calculate Age</button>
 
-<div class="result" id="result"></div>
+<div class="result" id="result" role="status" aria-live="polite"></div>
 
 </div>
 
@@ -156,46 +104,13 @@ Yes, completely free.</p>
 
 </div>
 
-</div>
+</main>
 
-<footer>
-© 2026 Daily Tool Hub | Free Age Calculator
+<footer class="footer">
+<p>&copy; 2026 <a href="index.html">Daily Tool Hub</a> | Free Age Calculator</p>
 </footer>
 
-<script>
-function calculateAge(){
-
-let dob=document.getElementById("dob").value;
-
-if(!dob){
-document.getElementById("result").innerHTML="Please select your date of birth";
-return;
-}
-
-let birthDate=new Date(dob);
-let today=new Date();
-
-let years=today.getFullYear()-birthDate.getFullYear();
-let months=today.getMonth()-birthDate.getMonth();
-let days=today.getDate()-birthDate.getDate();
-
-if(days<0){
-months--;
-let previousMonth=new Date(today.getFullYear(), today.getMonth(), 0);
-days += previousMonth.getDate();
-}
-
-if(months<0){
-years--;
-months += 12;
-}
-
-document.getElementById("result").innerHTML=
-years + " Years<br>" +
-months + " Months<br>" +
-days + " Days";
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

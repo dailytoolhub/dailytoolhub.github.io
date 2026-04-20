@@ -6,6 +6,16 @@
     <title>Reverse GST Calculator India - Calculate GST Instantly (2026)</title>
     <meta name="description" content="Use our free online GST Calculator for India. Instantly calculate Add GST, Remove GST, CGST, SGST, and IGST for 3%, 5%, 12%, 18%, and 28% slabs.">
     <meta name="keywords" content="gst calculator, gst calculator india, online gst calculator, reverse gst calculator, remove gst calculator">
+    <link rel="canonical" href="https://dailytoolhub.github.io/reverse-gst-calculator.html">
+    <meta name="robots" content="index,follow">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -40,6 +50,8 @@
     </script>
 
     <style>
+        .skip-link { position: absolute; top: -40px; left: 0; background: #1E3A8A; color: white; padding: 8px; z-index: 1000; }
+        .skip-link:focus { top: 0; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         .dark ::-webkit-scrollbar-track { background: #1E293B; }
@@ -50,7 +62,9 @@
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-darkbg dark:text-gray-100 transition-colors duration-200 font-sans">
 
-    <nav class="bg-white dark:bg-darkcard shadow-sm sticky top-0 z-50">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <nav class="bg-white dark:bg-darkcard shadow-sm sticky top-0 z-50" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
@@ -59,7 +73,9 @@
                 </div>
                 <div class="hidden md:flex space-x-8 font-medium">
                     <a href="index.html" class="text-primary dark:text-secondary">Home</a>
-                    <a href="#faq" class="hover:text-primary dark:hover:text-secondary transition">FAQs</a>
+                    <a href="gst-calculator.html" class="hover:text-primary dark:hover:text-secondary transition">GST</a>
+                    <a href="bmi-calculator.html" class="hover:text-primary dark:hover:text-secondary transition">BMI</a>
+                    <a href="emi-calculator.html" class="hover:text-primary dark:hover:text-secondary transition">EMI</a>
                 </div>
             </div>
         </div>

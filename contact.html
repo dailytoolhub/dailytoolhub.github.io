@@ -11,160 +11,65 @@
 <meta name="keywords" content="contact daily tool hub, contact us, tool website support, calculator website contact">
 
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dailytoolhub.github.io/contact.html">
 
-<style>
-body{
-font-family:Arial, sans-serif;
-margin:0;
-padding:0;
-background:#f8f9fa;
-color:#222;
-line-height:1.7;
-}
+<link rel="stylesheet" href="style.css">
 
-header{
-background:#0d6efd;
-color:white;
-padding:25px;
-text-align:center;
-}
-
-nav{
-background:white;
-padding:15px;
-text-align:center;
-border-bottom:1px solid #ddd;
-}
-
-nav a{
-margin:10px;
-text-decoration:none;
-color:#0d6efd;
-font-weight:bold;
-}
-
-.container{
-max-width:950px;
-margin:auto;
-padding:20px;
-}
-
-.box{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-margin-top:20px;
-}
-
-h2{
-margin-top:0;
-color:#0d6efd;
-}
-
-input, textarea{
-width:100%;
-padding:12px;
-margin-top:8px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:6px;
-font-size:16px;
-box-sizing:border-box;
-}
-
-textarea{
-min-height:140px;
-resize:vertical;
-}
-
-button{
-background:#0d6efd;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-font-size:16px;
-}
-
-button:hover{
-background:#0b5ed7;
-}
-
-.note{
-background:#eef4ff;
-padding:15px;
-border-radius:8px;
-margin-top:15px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:40px;
-}
-
-footer a{
-color:white;
-text-decoration:none;
-margin:0 8px;
-}
-</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 </head>
 
 <body>
 
-<header>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="header">
 <h1>Contact Us</h1>
-<p>We’d Love to Hear From You</p>
+<p>We'd Love to Hear From You</p>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="gst-calculator.html">GST Calculator</a>
-<a href="emi-calculator.html">EMI Calculator</a>
-<a href="about.html">About</a>
+<nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="bmi-calculator.html">BMI</a>
+    <a href="emi-calculator.html">EMI</a>
+    <a href="about.html">About</a>
 </nav>
 
-<div class="container">
+<main class="container" id="main-content">
 
-<div class="box">
-
+<article class="card">
 <h2>Get in Touch</h2>
-
 <p>If you have suggestions, found an error in any calculator, need support, or want to discuss partnerships, feel free to contact Daily Tool Hub.</p>
 
 <form action="#" method="post">
+<label for="name">Your Name</label>
+<input type="text" id="name" placeholder="Enter your name">
 
-<label>Your Name</label>
-<input type="text" placeholder="Enter your name">
+<label for="email">Email Address</label>
+<input type="email" id="email" placeholder="Enter your email">
 
-<label>Email Address</label>
-<input type="email" placeholder="Enter your email">
+<label for="subject">Subject</label>
+<input type="text" id="subject" placeholder="Enter subject">
 
-<label>Subject</label>
-<input type="text" placeholder="Enter subject">
-
-<label>Your Message</label>
-<textarea placeholder="Write your message here"></textarea>
+<label for="message">Your Message</label>
+<textarea id="message" placeholder="Write your message here"></textarea>
 
 <button type="submit">Send Message</button>
-
 </form>
 
-<div class="note">
+<div class="result" style="background: #e7f1ff; padding: 15px; border-radius: 8px; margin-top: 15px;">
 <strong>Note:</strong> This contact form is a static demo form for GitHub Pages. To receive messages, connect Formspree, Netlify Forms, Google Forms, or EmailJS later.
 </div>
+</article>
 
-</div>
-
-<div class="box">
-
+<article class="card">
 <h2>Why Contact Us?</h2>
-
 <ul>
 <li>Calculator correction requests</li>
 <li>Tool suggestions</li>
@@ -173,25 +78,17 @@ margin:0 8px;
 <li>Bug reports</li>
 <li>Feedback to improve website</li>
 </ul>
+</article>
 
-</div>
-
-<div class="box">
-
+<article class="card">
 <h2>Response Time</h2>
-
 <p>We aim to review messages as quickly as possible. Thank you for supporting Daily Tool Hub.</p>
+</article>
 
-</div>
+</main>
 
-</div>
-
-<footer>
-<p>© 2026 Daily Tool Hub</p>
-
-<a href="privacy-policy.html">Privacy Policy</a>
-<a href="disclaimer.html">Disclaimer</a>
-<a href="about.html">About</a>
+<footer class="footer">
+<p>&copy; 2026 <a href="index.html">Daily Tool Hub</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a></p>
 </footer>
 
 </body>

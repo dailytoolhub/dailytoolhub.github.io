@@ -10,95 +10,48 @@
 
 <meta name="keywords" content="gst calculator, gst calculator india, add gst calculator, remove gst calculator, gst online tool">
 
-<style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-padding:0;
-background:#f5f7fa;
-color:#222;
-}
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dailytoolhub.github.io/gst-calculator.html">
 
-header{
-background:#0d6efd;
-color:white;
-padding:20px;
-text-align:center;
-}
+<link rel="stylesheet" href="style.css">
 
-.container{
-max-width:800px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 0 10px rgba(0,0,0,0.08);
-margin-bottom:25px;
-}
-
-input,select,button{
-width:100%;
-padding:12px;
-margin-top:10px;
-margin-bottom:15px;
-font-size:16px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-background:#0d6efd;
-color:white;
-border:none;
-cursor:pointer;
-font-weight:bold;
-}
-
-button:hover{
-background:#084298;
-}
-
-.result{
-font-size:22px;
-font-weight:bold;
-color:green;
-margin-top:10px;
-}
-
-h2{
-margin-top:0;
-}
-
-footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-color:#666;
-}
-</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 </head>
 
 <body>
 
-<header>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="header">
 <h1>Free GST Calculator India 2026</h1>
 <p>Add GST or Remove GST Instantly Online</p>
 </header>
 
-<div class="container">
+<nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="reverse-gst-calculator.html">Reverse GST</a>
+    <a href="bmi-calculator.html">BMI</a>
+    <a href="emi-calculator.html">EMI</a>
+    <a href="discount-calculator.html">Discount</a>
+</nav>
+
+<main class="container" id="main-content">
 
 <div class="card">
 
 <h2>GST Calculator</h2>
 
-<label>Enter Amount</label>
-<input type="number" id="amount" placeholder="Enter amount">
+<label for="amount">Enter Amount (₹)</label>
+<input type="number" id="amount" placeholder="Enter amount" aria-describedby="amount-error" required min="0">
 
-<label>Select GST Rate</label>
+<label for="gst">Select GST Rate</label>
 <select id="gst">
 <option value="5">5%</option>
 <option value="12">12%</option>
@@ -106,10 +59,10 @@ color:#666;
 <option value="28">28%</option>
 </select>
 
-<button onclick="addGST()">Add GST</button>
-<button onclick="removeGST()">Remove GST</button>
+<button onclick="addGST()" aria-label="Add GST to amount">Add GST</button>
+<button onclick="removeGST()" class="secondary" aria-label="Remove GST from amount">Remove GST</button>
 
-<div class="result" id="result"></div>
+<div class="result" id="result" role="status" aria-live="polite"></div>
 
 </div>
 
@@ -151,43 +104,11 @@ Yes, 100% free.</p>
 
 </div>
 
-<footer>
-© 2026 Daily Tool Hub | Free Online GST Calculator
+<footer class="footer">
+<p>&copy; 2026 <a href="index.html">Daily Tool Hub</a> | Free Online GST Calculator</p>
 </footer>
 
-<script>
-function addGST(){
-let amount=parseFloat(document.getElementById("amount").value);
-let gst=parseFloat(document.getElementById("gst").value);
-
-if(isNaN(amount)){
-document.getElementById("result").innerHTML="Enter valid amount";
-return;
-}
-
-let tax=amount*gst/100;
-let total=amount+tax;
-
-document.getElementById("result").innerHTML=
-"GST Amount: ₹"+tax.toFixed(2)+"<br>Total: ₹"+total.toFixed(2);
-}
-
-function removeGST(){
-let amount=parseFloat(document.getElementById("amount").value);
-let gst=parseFloat(document.getElementById("gst").value);
-
-if(isNaN(amount)){
-document.getElementById("result").innerHTML="Enter valid amount";
-return;
-}
-
-let base=amount/(1+gst/100);
-let tax=amount-base;
-
-document.getElementById("result").innerHTML=
-"Base Amount: ₹"+base.toFixed(2)+"<br>GST Included: ₹"+tax.toFixed(2);
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
