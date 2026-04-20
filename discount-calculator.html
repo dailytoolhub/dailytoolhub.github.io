@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Discount Calculator 2026 – Sale Price & Savings Calculator</title>
+
+<meta name="description" content="Use our free Discount Calculator to calculate sale price, discount amount, and total savings instantly online. Perfect for shopping deals and offers.">
+
+<meta name="keywords" content="discount calculator, sale price calculator, percentage off calculator, savings calculator, online discount tool">
+
+<meta name="robots" content="index,follow">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background:#f5f7fa;
+color:#222;
+}
+
+header{
+background:#dc3545;
+color:white;
+padding:22px;
+text-align:center;
+}
+
+.container{
+max-width:850px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 0 12px rgba(0,0,0,0.08);
+margin-bottom:25px;
+}
+
+input,button{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+font-size:16px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+background:#dc3545;
+color:white;
+border:none;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#bb2d3b;
+}
+
+.result{
+font-size:22px;
+font-weight:bold;
+color:#dc3545;
+line-height:1.8;
+margin-top:10px;
+}
+
+h2{
+margin-top:0;
+}
+
+ul{
+padding-left:20px;
+line-height:1.8;
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Free Discount Calculator 2026</h1>
+<p>Calculate Sale Price & Savings Instantly</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Discount Calculator</h2>
+
+<label>Original Price (₹)</label>
+<input type="number" id="price" placeholder="Enter original price">
+
+<label>Discount Percentage (%)</label>
+<input type="number" id="discount" placeholder="Enter discount percentage">
+
+<button onclick="calculateDiscount()">Calculate Discount</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<div class="card">
+
+<h2>How to Use This Tool</h2>
+
+<p>Enter the original price and discount percentage. Click Calculate to see final price and total savings instantly.</p>
+
+<h2>Useful For</h2>
+
+<ul>
+<li>Online shopping deals</li>
+<li>Festival sale offers</li>
+<li>Clothing discounts</li>
+<li>Electronics offers</li>
+<li>Store promotions</li>
+<li>Price comparison</li>
+</ul>
+
+<h2>Examples</h2>
+
+<ul>
+<li>20% off ₹1000 = Final ₹800</li>
+<li>50% off ₹2000 = Final ₹1000</li>
+<li>10% off ₹500 = Final ₹450</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>1. Is this calculator free?</strong><br>
+Yes, completely free.</p>
+
+<p><strong>2. Can I calculate Black Friday offers?</strong><br>
+Yes, use it for any sale discount.</p>
+
+<p><strong>3. Does it work on mobile?</strong><br>
+Yes, mobile friendly.</p>
+
+<h2>Why Daily Tool Hub?</h2>
+
+<p>Daily Tool Hub provides free calculators for shopping, finance, education, and daily needs.</p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Daily Tool Hub | Free Discount Calculator
+</footer>
+
+<script>
+function calculateDiscount(){
+
+let price=parseFloat(document.getElementById("price").value);
+let discount=parseFloat(document.getElementById("discount").value);
+
+if(isNaN(price)||isNaN(discount)){
+document.getElementById("result").innerHTML="Please enter valid values";
+return;
+}
+
+let savings=(price*discount)/100;
+let finalPrice=price-savings;
+
+document.getElementById("result").innerHTML=
+"Discount Amount: ₹" + savings.toFixed(2) + "<br>" +
+"Final Price: ₹" + finalPrice.toFixed(2);
+
+}
+</script>
+
+</body>
+</html>
