@@ -4,104 +4,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>EMI Calculator India 2026 - Home Loan, Car Loan & Personal Loan EMI</title>
+<title>Free EMI Calculator India 2026 – Home, Car & Personal Loan EMI</title>
 
-<meta name="description" content="Free EMI Calculator India. Calculate monthly EMI for home loan, car loan, bike loan and personal loan instantly with interest and repayment details.">
+<meta name="description" content="Use our free EMI Calculator India to calculate Home Loan, Car Loan, and Personal Loan EMI instantly with monthly payment, total interest and total amount.">
 
-<meta name="keywords" content="emi calculator, loan emi calculator, home loan emi, car loan emi, personal loan calculator india">
+<meta name="keywords" content="emi calculator, loan emi calculator india, home loan emi calculator, car loan emi calculator, personal loan calculator">
 
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index,follow">
 
 <style>
 body{
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 margin:0;
 padding:0;
-background:#f8f9fa;
+background:#f5f7fa;
 color:#222;
-line-height:1.6;
 }
 
 header{
-background:#0d6efd;
+background:#198754;
 color:white;
-padding:25px;
+padding:20px;
 text-align:center;
-}
-
-nav{
-background:white;
-padding:15px;
-text-align:center;
-border-bottom:1px solid #ddd;
-}
-
-nav a{
-margin:10px;
-text-decoration:none;
-color:#0d6efd;
-font-weight:bold;
 }
 
 .container{
-max-width:900px;
+max-width:850px;
 margin:auto;
 padding:20px;
 }
 
-.box{
+.card{
 background:white;
 padding:25px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-margin-top:20px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.08);
+margin-bottom:25px;
 }
 
-input{
+input,select,button{
 width:100%;
 padding:12px;
 margin-top:10px;
 margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:6px;
 font-size:16px;
+border-radius:8px;
+border:1px solid #ccc;
 }
 
 button{
-background:#0d6efd;
+background:#198754;
 color:white;
-padding:12px 20px;
 border:none;
-border-radius:6px;
 cursor:pointer;
-font-size:16px;
-}
-
-button:hover{
-background:#0b5ed7;
-}
-
-.result{
-margin-top:20px;
-padding:15px;
-background:#eef4ff;
-border-radius:8px;
-font-size:18px;
 font-weight:bold;
 }
 
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:40px;
+button:hover{
+background:#146c43;
 }
 
-footer a{
-color:white;
-text-decoration:none;
-margin:0 8px;
+.result{
+font-size:22px;
+font-weight:bold;
+color:#198754;
+margin-top:10px;
+line-height:1.7;
+}
+
+h2{
+margin-top:0;
+}
+
+ul{
+padding-left:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+color:#666;
 }
 </style>
 </head>
@@ -109,109 +92,108 @@ margin:0 8px;
 <body>
 
 <header>
-<h1>EMI Calculator India 2026</h1>
-<p>Calculate Loan EMI Instantly</p>
+<h1>Free EMI Calculator India 2026</h1>
+<p>Home Loan, Car Loan & Personal Loan EMI Tool</p>
 </header>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="gst-calculator.html">GST Calculator</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
 
 <div class="container">
 
-<div class="box">
+<div class="card">
 
-<h2>Free EMI Calculator</h2>
+<h2>Loan EMI Calculator</h2>
 
 <label>Loan Amount (₹)</label>
-<input type="number" id="loan" placeholder="Enter loan amount">
+<input type="number" id="amount" placeholder="Enter loan amount">
 
-<label>Annual Interest Rate (%)</label>
-<input type="number" id="rate" placeholder="Example 10">
+<label>Interest Rate (%) Per Year</label>
+<input type="number" id="rate" placeholder="Enter annual interest rate">
 
 <label>Loan Tenure (Years)</label>
 <input type="number" id="years" placeholder="Enter years">
 
 <button onclick="calculateEMI()">Calculate EMI</button>
 
-<div class="result" id="result">
-Your EMI result will appear here.
-</div>
+<div class="result" id="result"></div>
 
 </div>
 
-<div class="box">
+<div class="card">
 
-<h2>What is EMI?</h2>
+<h2>How EMI is Calculated</h2>
 
-<p>EMI means Equated Monthly Installment. It is the fixed monthly payment made to repay a loan over a chosen tenure.</p>
+<p>EMI means Equated Monthly Installment. It is the fixed monthly amount paid to repay your loan principal plus interest over the selected tenure.</p>
 
-<p>This calculator is useful for home loans, personal loans, bike loans, education loans, and car finance.</p>
-
-</div>
-
-<div class="box">
-
-<h2>Benefits of EMI Calculator</h2>
-
-<ul>
-<li>Know monthly payment before taking loan</li>
-<li>Compare banks and lenders</li>
-<li>Plan your budget properly</li>
-<li>Understand interest cost</li>
-<li>Choose best repayment tenure</li>
-</ul>
-
-</div>
-
-<div class="box">
-
-<h2>Popular Uses</h2>
+<h2>Use This EMI Calculator For</h2>
 
 <ul>
 <li>Home Loan EMI Calculator</li>
 <li>Car Loan EMI Calculator</li>
 <li>Bike Loan EMI Calculator</li>
 <li>Personal Loan EMI Calculator</li>
-<li>Business Loan EMI Calculator</li>
+<li>Education Loan EMI Calculator</li>
 </ul>
+
+<h2>Benefits of EMI Calculator</h2>
+
+<ul>
+<li>Know monthly payment before taking loan</li>
+<li>Compare different interest rates</li>
+<li>Plan budget better</li>
+<li>Reduce loan stress</li>
+<li>Understand total interest payable</li>
+</ul>
+
+<h2>Example</h2>
+
+<p>If you take ₹5,00,000 loan for 5 years at 10% annual interest, the calculator shows your monthly EMI instantly.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>1. What is EMI?</strong><br>
+EMI is the fixed monthly payment for a loan.</p>
+
+<p><strong>2. Does lower interest reduce EMI?</strong><br>
+Yes, lower rates reduce monthly EMI and total interest.</p>
+
+<p><strong>3. Is this calculator free?</strong><br>
+Yes, 100% free.</p>
+
+<h2>Why Use Daily Tool Hub EMI Calculator?</h2>
+
+<p>Our free EMI calculator helps users quickly estimate monthly loan payments with accurate results for Indian banks and lenders.</p>
 
 </div>
 
 </div>
 
 <footer>
-<p>© 2026 Daily Tool Hub</p>
-<a href="privacy-policy.html">Privacy Policy</a>
-<a href="disclaimer.html">Disclaimer</a>
+© 2026 Daily Tool Hub | Free EMI Calculator India
 </footer>
 
 <script>
 function calculateEMI(){
 
-let P = parseFloat(document.getElementById("loan").value);
-let annualRate = parseFloat(document.getElementById("rate").value);
-let years = parseFloat(document.getElementById("years").value);
+let P=parseFloat(document.getElementById("amount").value);
+let annualRate=parseFloat(document.getElementById("rate").value);
+let years=parseFloat(document.getElementById("years").value);
 
-if(isNaN(P) || isNaN(annualRate) || isNaN(years)){
-document.getElementById("result").innerHTML="Please fill all fields correctly.";
+if(isNaN(P)||isNaN(annualRate)||isNaN(years)){
+document.getElementById("result").innerHTML="Please enter valid values";
 return;
 }
 
-let r = annualRate / 12 / 100;
-let n = years * 12;
+let r=annualRate/12/100;
+let n=years*12;
 
-let emi = (P * r * Math.pow(1+r,n)) / (Math.pow(1+r,n)-1);
-let total = emi * n;
-let interest = total - P;
+let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
 
-document.getElementById("result").innerHTML =
-"Monthly EMI: ₹" + emi.toFixed(2) +
-"<br>Total Payment: ₹" + total.toFixed(2) +
-"<br>Total Interest: ₹" + interest.toFixed(2);
+let totalPayment=emi*n;
+let totalInterest=totalPayment-P;
+
+document.getElementById("result").innerHTML=
+"Monthly EMI: ₹"+emi.toFixed(2)+"<br>" +
+"Total Interest: ₹"+totalInterest.toFixed(2)+"<br>" +
+"Total Payment: ₹"+totalPayment.toFixed(2);
 
 }
 </script>
